@@ -1,0 +1,125 @@
+﻿@model TraineePro.Models.TestModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<html lang="ar" dir="rtl">
+<div style="background-color: #f8f9fc; min-height: 100vh;">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header text-white text-center py-4" style="background: #0056b3;">
+                    <h3 class="mb-0">طلب تدريب تعاوني</h3>
+                </div>
+                <div class="card-body bg-white px-5 py-4">
+                    <form asp-action="Create" method="post" class="needs-validation" novalidate>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="FirstName" class="form-label fw-bold">الاسم الأول</label>
+                                <input asp-for="FirstName" class="form-control shadow-sm" placeholder="ادخل الاسم الأول" required>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="MiddleName" class="form-label fw-bold">اسم الأب</label>
+                                <input asp-for="MiddleName" class="form-control shadow-sm" placeholder="ادخل اسم الاب" required>
+                                <span asp-validation-for="MiddleName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="ThirdName" class="form-label fw-bold">اسم الجد</label>
+                                <input asp-for="ThirdName" class="form-control shadow-sm" placeholder="ادخل اسم الجد" required>
+                                <span asp-validation-for="ThirdName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="LastName" class="form-label fw-bold">اسم العائلة</label>
+                                <input asp-for="LastName" class="form-control shadow-sm" placeholder="ادخل اسم العائلة" required>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="UniversityID" class="form-label fw-bold">الرقم الجامعي</label>
+                                <input asp-for="UniversityID" class="form-control shadow-sm" placeholder="ادخل الرقم الجامعي" required>
+                                <span asp-validation-for="UniversityID" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="NationalID" class="form-label fw-bold">رقم الهوية</label>
+                                <input asp-for="NationalID" class="form-control shadow-sm" placeholder="ادخل رقم الهوية" required>
+                                <span asp-validation-for="NationalID" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label fw-bold">البريد الإلكتروني</label>
+                                <input asp-for="Email" class="form-control shadow-sm" placeholder="ادخل البريد الإلكتروني" required>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Phone" class="form-label fw-bold">رقم الجوال</label>
+                                <input asp-for="Phone" class="form-control shadow-sm" placeholder="ادخل رقم الجوال" required>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="BirthDate" class="form-label fw-bold">تاريخ الميلاد</label>
+                                <input asp-for="BirthDate" type="date" class="form-control shadow-sm" required>
+                                <span asp-validation-for="BirthDate" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Gender" class="form-label fw-bold">الجنس</label>
+                                <select asp-for="Gender" class="form-control shadow-sm" required>
+                                    <option value="">اختر الجنس</option>
+                                    <option value="Male">ذكر</option>
+                                    <option value="Female">أنثى</option>
+                                </select>
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="University" class="form-label fw-bold">الجامعة</label>
+                                <input asp-for="University" class="form-control shadow-sm" placeholder="ادخل الاسم الجامعة" required>
+                                <span asp-validation-for="University" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Collage" class="form-label fw-bold">الكلية</label>
+                                <input asp-for="Collage" class="form-control shadow-sm" required>
+                                <span asp-validation-for="Collage" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Major" class="form-label fw-bold">التخصص</label>
+                                <input asp-for="Major" class="form-control shadow-sm" placeholder="ادخل اسم التخصص" required>
+                                <span asp-validation-for="Major" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label asp-for="TrainingStartDate" class="form-label fw-bold">تاريخ بداية التدريب</label>
+                                <input asp-for="TrainingStartDate" type="date" class="form-control shadow-sm" required>
+                                <span asp-validation-for="TrainingStartDate" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="TrainingEndDate" class="form-label fw-bold">تاريخ نهاية التدريب</label>
+                                <input asp-for="TrainingEndDate" type="date" class="form-control shadow-sm" required>
+                                <span asp-validation-for="TrainingEndDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-3 shadow-sm rounded-pill">إرسال البيانات</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center text-muted py-3">
+                    <small>جميع الحقوق محفوظة - أمانة القصيم</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

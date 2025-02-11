@@ -1,0 +1,83 @@
+﻿@model TraineePro.Models.TestModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<html lang="ar" dir="rtl">
+<div style="background-color: #f8f9fc; min-height: 100vh;">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <!-- Header -->
+                <div class="card-header text-white text-center py-4" style="background: #dc3545;">
+                    <h3 class="mb-0">حذف بيانات المتدرب</h3>
+                </div>
+                <!-- Body -->
+                <div class="card-body bg-white px-5 py-4">
+                    <h4 class="text-center text-danger">هل أنت متأكد من أنك تريد حذف هذه البيانات؟</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4">الاسم الأول</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.FirstName)</dd>
+
+                        <dt class="col-sm-4">اسم الأب</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MiddleName)</dd>
+
+                        <dt class="col-sm-4">اسم الجد</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.ThirdName)</dd>
+
+                        <dt class="col-sm-4">اسم العائلة</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.LastName)</dd>
+
+                        <dt class="col-sm-4">رقم الهوية</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NationalID)</dd>
+
+                        <dt class="col-sm-4">الرقم الجامعي</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.UniversityID)</dd>
+
+                        <dt class="col-sm-4">البريد الإلكتروني</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-4">رقم الجوال</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Phone)</dd>
+
+                        <dt class="col-sm-4">تاريخ الميلاد</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.BirthDate)</dd>
+
+                        <dt class="col-sm-4">الجنس</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Gender)</dd>
+
+                        <dt class="col-sm-4">الجامعة</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.University)</dd>
+
+                        <dt class="col-sm-4">الكلية</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Collage)</dd>
+
+                        <dt class="col-sm-4">التخصص</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Major)</dd>
+
+                        <dt class="col-sm-4">تاريخ بداية التدريب</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.TrainingStartDate)</dd>
+
+                        <dt class="col-sm-4">تاريخ نهاية التدريب</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.TrainingEndDate)</dd>
+                    </dl>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" asp-for="TraineeID" />
+                        <div class="row">
+                            <div class="col text-center">
+                                <button type="submit" class="btn btn-danger shadow-sm px-4 py-2 rounded-pill">حذف</button>
+                                <a asp-action="Index" class="btn btn-secondary shadow-sm px-4 py-2 rounded-pill">إلغاء</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Footer -->
+                <div class="card-footer text-center text-muted py-3">
+                    <small>جميع الحقوق محفوظة - أمانة القصيم</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

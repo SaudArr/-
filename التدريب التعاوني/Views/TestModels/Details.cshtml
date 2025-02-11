@@ -1,0 +1,71 @@
+﻿@model TraineePro.Models.TestModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<html lang="ar" dir="rtl">
+<div style="background-color: #f8f9fc; min-height: 100vh;">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header text-white text-center py-4" style="background: #0056b3;">
+                    <h3 class="mb-0">تفاصيل المتدرب</h3>
+                </div>
+                <div class="card-body bg-white px-5 py-4">
+                    <dl class="row">
+                        <dt class="col-sm-4">الاسم الأول</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.FirstName)</dd>
+
+                        <dt class="col-sm-4">اسم الأب</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MiddleName)</dd>
+
+                        <dt class="col-sm-4">اسم الجد</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.ThirdName)</dd>
+
+                        <dt class="col-sm-4">اسم العائلة</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.LastName)</dd>
+
+                        <dt class="col-sm-4">رقم الهوية</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NationalID)</dd>
+
+                        <dt class="col-sm-4">الرقم الجامعي</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.UniversityID)</dd>
+
+                        <dt class="col-sm-4">البريد الإلكتروني</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-4">رقم الجوال</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Phone)</dd>
+
+                        <dt class="col-sm-4">تاريخ الميلاد</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.BirthDate)</dd>
+
+                        <dt class="col-sm-4">الجنس</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Gender)</dd>
+
+                        <dt class="col-sm-4">الجامعة</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.University)</dd>
+
+                        <dt class="col-sm-4">الكلية</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Collage)</dd>
+
+                        <dt class="col-sm-4">التخصص</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Major)</dd>
+
+                        <dt class="col-sm-4">تاريخ بداية التدريب</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.TrainingStartDate)</dd>
+
+                        <dt class="col-sm-4">تاريخ نهاية التدريب</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.TrainingEndDate)</dd>
+
+                    </dl>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Edit" asp-route-id="@Model?.TraineeID" class="btn btn-primary">تعديل</a>
+                    <a asp-action="Index" class="btn btn-secondary">العودة للقائمة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
